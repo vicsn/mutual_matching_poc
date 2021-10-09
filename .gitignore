@@ -133,3 +133,5 @@ dmypy.json
 *.teal.tok
 
 _sandbox/
+
+**.swp
