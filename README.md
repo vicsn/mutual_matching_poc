@@ -1,11 +1,11 @@
-# Algorand Auction Demo
+# Algorand Mutual Matching Demo
 
-This demo is an on-chain NFT auction using smart contracts on the Algorand blockchain.
+*This demo is based on the Algorand Auction Demo*
 
 ## Usage
 
-The file `auction/operations.py` provides a set of functions that can be used to create and interact
-with auctions. See that file for documentation.
+The file `mutual_matching/operations.py` provides a set of functions that can be used to create and interact
+with the mutual_matching contract. See that file for documentation.
 
 ## Development Setup
 
@@ -22,9 +22,9 @@ Active venv:
 Install dependencies:
 * `pip install -r requirements.txt`
 
-Run tests:
+Run example:
 * First, start an instance of [sandbox](https://github.com/algorand/sandbox) (requires Docker): `./sandbox up nightly`
-* `pytest`
+* `python3 example_mutual_matching.py`
 * When finished, the sandbox can be stopped with `./sandbox down`
 
 Format code:
