@@ -82,8 +82,14 @@ def approval_program():
         Reject(),
     )
 
+    on_setup = Seq(
+       Assert(Global.latest_timestamp() < App.globalGet(start_time_key)),
+       Approve(),
+    )
+
     on_call_method = Txn.application_args[0]
     on_call = Cond(
+        [on_call_method == Bytes("setup"), on_setup],
         [on_call_method == Bytes("match"), on_match],
     )
 
